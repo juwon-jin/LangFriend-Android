@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/view_searchbar" android:id="@+id/view_searchbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp" >
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--랭킹 화면-->
+
+            <LinearLayout
+                android:id="@+id/LL_rank"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="랭킹"
+                    android:textSize="14sp"
+                    android:background="@color/colorWhite"
+                    android:padding="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="0px"
+                    android:layout_weight="200">
+
+                    <android.support.v4.widget.SwipeRefreshLayout
+                        android:id="@+id/pull_to_refresh"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recycler_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#F3F3F3"
+                            android:paddingBottom="56dp"
+                            android:scrollbars="vertical" />
+
+                    </android.support.v4.widget.SwipeRefreshLayout>
+
+                    <include layout="@layout/view_loading_indicator" android:id="@+id/indicator" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--검색결과 화면 -->
+
+            <LinearLayout
+                android:id="@+id/LL_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="검색결과"
+                    android:textSize="14sp"
+                    android:background="@color/colorWhite"
+                    android:padding="10dp"/>
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_view_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorWhite"
+                        android:paddingBottom="56dp"
+                        android:scrollbars="vertical" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

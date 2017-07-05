@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="makejin.langfriend"
+    android:versionCode="1952"
+    android:versionName="0.0.0.1952">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+            android:value="GlideModule" />
+
+        <activity
+            android:name=".juwon.Splash.SplashActivity_"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".juwon.TabActivity.TabActivity_"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".juwon.TabActivity.Tab5MyPage.Setting"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".juwon.TabActivity.Tab5MyPage.Agreement"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".juwon.TabActivity.Tab5MyPage.PrivacyRule"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".juwon.TabActivity.Tab5MyPage.ThumbPopupActivity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name=".juwon.Activity.RegisterActivity_"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".juwon.Sign.SignActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".juwon.TabActivity.Tab5MyPage.PopupEditAboutMe"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name=".juwon.Detail.DetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".juwon.Detail.DetailActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".juwon.LikedPeople.LikedPeople"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".juwon.LikedPeople.LikedPeople_"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".juwon.Profile.YourProfileActivity" />
+        <activity
+            android:name=".juwon.Utils.PopupNotCompleted"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name=".juwon.Utils.PopupRequest"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity android:name=".juwon.Splash.SplashTest2" />
+        <activity
+            android:name=".juwon.TabActivity.Tab1Recommand.PopupNoMore"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity android:name=".juwon.TabActivity.Tab1Recommand.DetailUserActivity" />
+        <activity
+            android:name=".juwon.TabActivity.Tab5MyPage.ProfileDetailActivity"
+            android:label="@string/title_activity_profile_detail"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".juwon.TabActivity.Tab5MyPage.ProfileEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".juwon.Detail.ReCommentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".juwon.Detail.ReCommentActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".juwon.NearbyYou.NearByYou"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".juwon.Signup.SignupActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".juwon.Signup.Signup8PopupActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="NonFacebookSignupAfterPopupActivity"
+            android:theme="@android:style/Theme.Holo.Dialog.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".juwon.Splash.TestActivity"
+            android:label="@string/title_activity_test"
+            android:theme="@style/AppTheme">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+
+        <service android:name=".juwon.FCM.MyFcmListenerService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".juwon.FCM.MyInstanceIDListenerService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".juwon.TabActivity.Tab1Recommand.RecommandLoadingActivity"
+            android:label="@string/title_activity_recommand_loading"
+            android:theme="@style/AppTheme"></activity>
+    </application>
+
+</manifest>

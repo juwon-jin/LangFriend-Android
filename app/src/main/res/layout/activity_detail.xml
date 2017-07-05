@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="juwon.Detail.DetailActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay" >
+
+        <include layout="@layout/toolbar_default" android:id="@+id/cs_toolbar" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/pull_to_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="45dp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F3F3F3"
+                android:scrollbars="vertical" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:padding="1dp"
+            android:orientation="horizontal"
+            android:background="@drawable/border_comment">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/icon_mypage"
+                android:id="@+id/CIV_pic"/>
+            <EditText
+                android:id="@+id/ET_comment"
+                android:layout_width="270dp"
+                android:layout_height="match_parent"
+                android:hint="댓글을 남겨보세요!"
+                android:textSize="15dp"
+                android:background="@drawable/border"
+                android:layout_margin="5dp"
+                android:paddingLeft="10dp"/>
+            <Button
+                android:id="@+id/BT_comment"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/comment3"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+
+
+        <include layout="@layout/view_loading_indicator" android:id="@+id/indicator" />
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

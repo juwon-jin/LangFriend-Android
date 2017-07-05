@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/logo_splash">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="400dp"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+            <Button
+                android:id="@+id/BT_facebook_no"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Facebook 계정이 없으신가요?"
+                android:textSize="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:layout_centerHorizontal="true"
+                android:background="@null"/>
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/BT_facebook"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="5dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:layout_above="@id/BT_facebook_no"/>
+        </RelativeLayout>
+
+        <include layout="@layout/view_loading_indicator" android:id="@+id/indicator" />
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

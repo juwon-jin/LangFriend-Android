@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@color/colorWhite"
+    android:padding="10dp">
+    <ImageView
+        android:id="@+id/IV_food"
+        android:src="@drawable/food"
+        android:scaleType="centerCrop"
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_marginLeft="15dp">
+        <TextView
+            android:id="@+id/food_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textSize="18sp"
+            android:textColor="@color/colorBlack"
+            android:text="매콤 해물 떡볶이"/>
+        <TextView
+            android:id="@+id/food_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorGrayText"
+            android:text="#매콤 #달콤 #한식 #볶음"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context=".juwon.Activity.RegisterActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay" >
+        <include layout="@layout/toolbar_default" android:id="@+id/cs_toolbar" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="음식명 : "
+                    android:textSize="14sp"/>
+                <EditText
+                    android:id="@+id/edit_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:background="@color/colorGrayLine" />
+            <ImageView
+                android:id="@+id/posting_image"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:scaleType="centerCrop"
+                android:clickable="true"
+                android:src="@drawable/add_image"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:background="@color/colorGrayLine" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="카테고리"
+                android:textSize="14sp"
+                android:layout_marginBottom="10dp"/>
+            <LinearLayout
+                android:id="@+id/location_part"
+                android:layout_below="@+id/type_part"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+                <Spinner
+                    android:id="@+id/location_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="1dp"
+                    android:textSize="14dp"
+                    android:textColor="#302f2f"
+                    android:textAlignment="center"
+                    android:background="@drawable/option_menu"/>
+                <Spinner
+                    android:id="@+id/language_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:padding="1dp"
+                    android:textSize="14dp"
+                    android:textColor="#302f2f"
+                    android:textAlignment="center"
+                    android:background="@drawable/option_menu" />
+                <Spinner
+                    android:id="@+id/activity_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:padding="1dp"
+                    android:textSize="14dp"
+                    android:textColor="#302f2f"
+                    android:textAlignment="center"
+                    android:background="@drawable/option_menu" />
+            </LinearLayout>
+            <com.zhy.view.flowlayout.TagFlowLayout
+                xmlns:zhy="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/category_result_location"
+                zhy:max_select="-1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+            </com.zhy.view.flowlayout.TagFlowLayout>
+            <com.zhy.view.flowlayout.TagFlowLayout
+                xmlns:zhy="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/category_result_language"
+                zhy:max_select="-1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+            </com.zhy.view.flowlayout.TagFlowLayout>
+            <com.zhy.view.flowlayout.TagFlowLayout
+                xmlns:zhy="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/category_result_activity"
+                zhy:max_select="-1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+            </com.zhy.view.flowlayout.TagFlowLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:background="@color/colorGrayLine" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="글 내용"
+                android:textSize="14sp"
+                android:layout_marginBottom="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edit_posting"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:textSize="14sp"
+                    android:singleLine="true"
+                    android:hint="글의 내용을 입력해주세요." />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:background="@color/colorGrayLine" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
+    <include layout="@layout/view_loading_indicator" android:id="@+id/indicator" />
+</FrameLayout>

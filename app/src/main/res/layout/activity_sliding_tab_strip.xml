@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="1"
+	    android:orientation="vertical">
+        <me.xiaopan.psts.PagerSlidingTabStrip
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/slidingTabStrip_1"
+            app:slidingBlock="@drawable/image_sliding_block"
+            android:background="@drawable/sliding_tab_strip_background">
+            <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+				android:orientation="horizontal">
+                <TextView
+	                style="@style/text_slidingTabTitle"
+					android:layout_width="95dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+	                android:text="너가 친구 요청 (0)" />
+				<TextView
+					style="@style/text_slidingTabTitle"
+					android:layout_width="95dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:text="내가 친구 요청 (0)" />
+                <TextView
+	                style="@style/text_slidingTabTitle"
+					android:layout_width="95dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+	                android:text="우린 이미 친구 (0)"/>
+            </LinearLayout>
+        </me.xiaopan.psts.PagerSlidingTabStrip>
+
+        <FrameLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1">
+            <android.support.v4.view.ViewPager
+	            android:id="@+id/viewPager_1"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"/>
+            <include layout="@layout/include_shadow_down"/>
+            <include layout="@layout/include_shadow_up"/>
+        </FrameLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="140dp"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/TV_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="서비스 준비 중입니다"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"/>
+        <Button
+            android:id="@+id/BT_yes"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="확인"
+            android:background="@drawable/category_btn"
+            android:layout_below="@id/TV_edit"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"/>
+    </RelativeLayout>
+</LinearLayout>

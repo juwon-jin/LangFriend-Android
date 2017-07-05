@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/logo_splash">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="400dp"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:minWidth="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/ET_email"
+                android:hint="ID(E-MAIL)"
+                android:layout_centerHorizontal="true"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:minWidth="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/ET_pw"
+                android:hint="PASSWORD"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/ET_email"
+                android:layout_marginTop="10dp"
+                android:inputType="textPassword"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/BT_signin"
+                android:text="로그인"
+                android:layout_below="@+id/ET_pw"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_round_posting"/>
+            <Button
+                android:id="@+id/BT_signup"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="처음 오셨나요? 여기를 클릭해서 가입해보세요!"
+                android:textSize="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:layout_centerHorizontal="true"
+                android:background="@null"/>
+        </RelativeLayout>
+        <include layout="@layout/view_loading_indicator" android:id="@+id/indicator" />
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

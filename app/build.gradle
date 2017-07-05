@@ -1,0 +1,106 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+import java.util.regex.Pattern
+
+def AAVersion = '4.1.0'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "makejin.langfriend"
+        minSdkVersion 19
+        targetSdkVersion 22
+        versionCode 2
+        versionName "2.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+apt {
+    arguments {
+        androidManifestFile variant.outputs[0]?.processResources?.manifestFile
+        resourcePackageName 'makejin.langfriend'
+    }
+}
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    apt "org.androidannotations:androidannotations:$AAVersion"
+    compile "org.androidannotations:androidannotations-api:$AAVersion"
+    compile files('libs/libDaumMapAndroid.jar')
+
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta3'
+    compile 'com.squareup.retrofit2:retrofit:2.0.0-beta3'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta3'
+    compile 'com.squareup.okhttp:logging-interceptor:2.6.0'
+    compile 'io.reactivex:rxjava:1.0.+'
+    compile 'io.reactivex:rxandroid:0.23.+'
+    compile 'com.aurelhubert:ahbottomnavigation:1.3.3'
+    compile 'com.baoyz.actionsheet:library:1.1.7'
+    compile 'jp.wasabeef:glide-transformations:2.0.0'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.zhy:flowlayout-lib:1.0.3'
+    compile 'com.wefika:flowlayout:0.3.0'
+    compile 'com.facebook.android:facebook-android-sdk:[4,5)'
+    compile 'com.github.blackfizz:eazegraph:1.2.2@aar'
+    compile 'org.jsoup:jsoup:1.8.3'
+    compile 'com.github.ViksaaSkool:AwesomeSplash:v1.0.0'
+    compile 'com.daimajia.easing:library:1.0.1@aar'
+    compile 'com.daimajia.androidanimations:library:1.1.3@aar'
+    compile 'me.xiaopan:pagerslidingtabstrip:1.7.1'
+    compile 'cn.aigestudio.wheelpicker:WheelPicker:1.1.2'
+    compile 'com.github.bumptech.glide:okhttp3-integration:1.4.0@aar'
+    compile 'com.crystal:crystalrangeseekbar:1.1.2'
+    compile 'com.theartofdev.edmodo:android-image-cropper:2.3.+'
+    compile 'com.google.android.gms:play-services-appindexing:9.8.0'
+    compile 'com.google.firebase:firebase-messaging:9.8.0'
+    testCompile 'junit:junit:4.12'
+}
+
+task('increaseVersionCode') << {
+    def manifestFile = file("src/main/AndroidManifest.xml")
+    def pattern = Pattern.compile("versionCode=\"(\\d+)\"")
+    def manifestText = manifestFile.getText()
+    def matcher = pattern.matcher(manifestText)
+    matcher.find()
+    def versionCode = Integer.parseInt(matcher.group(1))
+    def manifestContent = matcher.replaceAll("versionCode=\"" + ++versionCode + "\"")
+    manifestFile.write(manifestContent)
+}
+
+task('incrementVersionName') << {
+    def manifestFile = file("src/main/AndroidManifest.xml")
+    def patternVersionNumber = Pattern.compile("versionName=\"(\\d+)\\.(\\d+)\\.(\\d+)\\.(\\d+)\"")
+    def manifestText = manifestFile.getText()
+    def matcherVersionNumber = patternVersionNumber.matcher(manifestText)
+    matcherVersionNumber.find()
+    def majorVersion = Integer.parseInt(matcherVersionNumber.group(1))
+    def minorVersion = Integer.parseInt(matcherVersionNumber.group(2))
+    def pointVersion = Integer.parseInt(matcherVersionNumber.group(3))
+    def buildVersion = Integer.parseInt(matcherVersionNumber.group(4))
+    def mNextVersionName = majorVersion + "." + minorVersion + "." + pointVersion + "." + (buildVersion + 1)
+    def manifestContent = matcherVersionNumber.replaceAll("versionName=\"" + mNextVersionName + "\"")
+    manifestFile.write(manifestContent)
+}
+
+tasks.whenTaskAdded { task ->
+    if (task.name == 'generateReleaseBuildConfig' || task.name == 'generateDebugBuildConfig') {
+        task.dependsOn 'increaseVersionCode'
+        task.dependsOn 'incrementVersionName'
+    }
+}
+
+apply plugin: 'com.google.gms.google-services'

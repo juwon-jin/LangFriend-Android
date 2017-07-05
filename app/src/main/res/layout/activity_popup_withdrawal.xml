@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="250dp"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/TV_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="정말로 탈퇴하시겠습니까?"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginBottom="25dp"
+            android:layout_marginTop="25dp"
+            android:textStyle="bold"/>
+        <Button
+            android:id="@+id/BT_no"
+            android:layout_marginTop="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="취소"
+            android:background="@drawable/category_btn"
+            android:layout_below="@id/TV_edit"
+            android:layout_marginLeft="40dp"/>
+        <Button
+            android:id="@+id/BT_yes"
+            android:layout_marginTop="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="확인"
+            android:background="@drawable/category_btn"
+            android:layout_below="@id/TV_edit"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"/>
+    </RelativeLayout>
+</LinearLayout>

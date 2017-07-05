@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">LangFriend</string>
+    <string name="facebook_app_id">307662789605652</string>
+    <string name="action_settings">Settings</string>
+
+    <!--DEFAULT-->
+    <string name="exit_app">"\'뒤로\' 버튼을 한번 더 누르시면 종료됩니다."</string>
+
+    <!--TABS-->
+    <string name="tab_1">친구 찾기</string>
+    <string name="tab_2">친구 요청</string>
+    <string name="tab_3">친구 목록</string>
+    <string name="tab_4">피드</string>
+    <string name="tab_5">내 정보</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="category_taste">
+        <item name="taste_1">달콤</item>
+        <item name="taste_2">매콤</item>
+        <item name="taste_3">시원</item>
+    </string-array>
+
+    <string-array name="category_country">
+        <item name="taste_1">한식</item>
+        <item name="taste_2">중식</item>
+        <item name="taste_3">일식</item>
+        <item name="taste_3">양식</item>
+    </string-array>
+    <string-array name="category_cooking">
+        <item name="taste_1">볶음</item>
+        <item name="taste_2">생으로</item>
+        <item name="taste_3">익힘</item>
+        <item name="taste_4">튀김</item>
+    </string-array>
+    <string name="title_activity_profile_detail">ProfileDetailActivity</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_recommand_loading">RecommandLoadingActivity</string>
+
+</resources>

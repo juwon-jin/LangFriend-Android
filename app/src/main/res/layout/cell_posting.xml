@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="18dp"
+    android:background="@color/colorWhite">
+
+    <include layout="@layout/cell_posting_header" android:id="@+id/cell_posting_header" />
+
+    <include layout="@layout/cell_posting_body_image" android:id="@+id/cell_posting_body_image" />
+
+    <include layout="@layout/cell_posting_body_desc" android:id="@+id/cell_posting_body_desc" />
+
+    <include layout="@layout/cell_posting_tail" android:id="@+id/cell_posting_tail" />
+
+</LinearLayout>

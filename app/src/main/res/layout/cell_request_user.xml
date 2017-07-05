@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginTop="18dp">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite">
+        <LinearLayout
+            android:id="@+id/LL_left"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:layout_marginLeft="10dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/IV_user"
+                    android:scaleType="fitXY"/>
+                <include layout="@layout/view_loading_indicator" android:id="@+id/indicator"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/TV_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:gravity="left|center_vertical"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorBlack"/>
+                <TextView
+                    android:id="@+id/TV_category"
+                    android:layout_below="@+id/TV_user_name"
+                    android:layout_width="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorGrayText"
+                    android:layout_marginLeft="10dp"/>
+                <TextView
+                    android:id="@+id/TV_about_me"
+                    android:layout_below="@+id/TV_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:maxLines="2"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/BT_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:text="수락 -- >"
+                android:background="@drawable/category_btn"/>
+            <Button
+                android:id="@+id/BT_no"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:text="-- 거절"
+                android:background="@drawable/category_btn" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/RL_IV_yes_2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="10dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/border_round_yes_2"
+        android:visibility="invisible">
+        <ImageView
+            android:id="@+id/IV_yes_2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/mark_yes"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/RL_IV_no_2"-->
+        <!--android:layout_width="80dp"-->
+        <!--android:layout_height="80dp"-->
+        <!--android:layout_margin="10dp"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:background="@drawable/border_round_no_2">-->
+        <!--<ImageView-->
+            <!--android:id="@+id/IV_no_2"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:background="@drawable/mark_no"-->
+            <!--android:layout_centerInParent="true"/>-->
+    <!--</RelativeLayout>-->
+
+
+</RelativeLayout>
+
+    <!--<include layout="@layout/cell_posting_header" android:id="@+id/cell_posting_header" />-->
+
+    <!---->
+
+    <!--<include layout="@layout/cell_posting_body_desc" android:id="@+id/cell_posting_body_desc" />-->
+
+    <!--<include layout="@layout/cell_posting_tail" android:id="@+id/cell_posting_tail" />-->
+

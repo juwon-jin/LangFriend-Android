@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+        <ImageView
+            android:id="@+id/posting_image"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:scaleType="centerCrop"
+            android:background="@color/colorWhite"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/img_timeline_shadow"
+            android:scaleType="fitXY"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/imageView2" />
+
+        <include layout="@layout/view_loading_indicator" android:id="@+id/indicator"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="30dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="20dp">
+        <TextView
+            android:id="@+id/posting_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="23sp"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/view_cnt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/colorGrayLine"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="@color/colorGrayLineLight" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="16dp">
+            <LinearLayout
+                android:id="@+id/eat_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:paddingLeft="20dp"
+                android:gravity="left|center_vertical"
+                android:background="?attr/selectableItemBackground">
+                <ImageView
+                    android:id="@+id/heart_img"
+                    android:layout_width="14sp"
+                    android:layout_height="14sp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/heart_gray"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="알고싶어요"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorGrayText"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_nearby"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="3">
+                <ImageView
+                    android:layout_width="14sp"
+                    android:layout_height="14sp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/location_us"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="글 쓴 위치 보기"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorGrayLine"/>
+            </LinearLayout>]
+
+    </LinearLayout>
+
+</LinearLayout>

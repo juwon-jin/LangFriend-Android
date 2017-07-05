@@ -1,0 +1,98 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- Custom pop up -->
+        <item name="android:popupMenuStyle">@style/AndroidSRC.PopupMenu</item>
+        <item name="android:itemTextAppearance">@style/AndroidSRC.TextAppearance</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:textColorPrimary">@color/colorAccent</item>
+        <item name="actionMenuTextColor">@color/colorAccent</item>
+    </style>
+
+    <!-- WHITE COLOR TOOL BAR -->
+    <style name="AppTheme.AppBarOverlay.White" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorPrimary">@color/colorWhite</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:textColorPrimary">@color/colorBlack</item>
+    </style>
+
+    <!-- TOOL BAR TEXT -->
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="android:textSize">17sp</item>
+        <!--<item name="android:gravity">center</item>-->
+        <!--<item name="android:layout_gravity">center</item>-->
+    </style>
+
+    <!-- LONG PRESS IN COMMENT -->
+    <style name="myDialog" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!-- iOS7 Style (Action Sheet) -->
+    <style name="ActionSheetStyleiOS7">
+        <item name="actionSheetBackground">@android:color/transparent</item>
+        <item name="cancelButtonBackground">@drawable/slt_as_ios7_cancel_bt</item>
+        <item name="otherButtonTopBackground">@drawable/slt_as_ios7_other_bt_top</item>
+        <item name="otherButtonMiddleBackground">@drawable/slt_as_ios7_other_bt_middle</item>
+        <item name="otherButtonBottomBackground">@drawable/slt_as_ios7_other_bt_bottom</item>
+        <item name="otherButtonSingleBackground">@drawable/slt_as_ios7_other_bt_single</item>
+        <item name="cancelButtonTextColor">#1E82FF</item>
+        <item name="otherButtonTextColor">#1E82FF</item>
+        <item name="actionSheetPadding">10dp</item>
+        <item name="otherButtonSpacing">0dp</item>
+        <item name="cancelButtonMarginTop">10dp</item>
+        <item name="actionSheetTextSize">14sp</item>
+    </style>
+
+    <!-- LOADING INDICATOR -->
+    <style name="CircularProgress" parent="Theme.AppCompat.Light">
+        <item name="android:colorAccent">@color/colorGrayBackGround</item>
+        <item name="android:color">@color/colorGrayBackGround</item>
+    </style>
+
+    <!-- RATING -->
+    <style name="CustomRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/custom_ratingbar</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:maxHeight">40dp</item>
+    </style>
+
+    <!-- POPUP MENU -->
+    <style name="AndroidSRC.PopupMenu" parent="@android:style/Widget.Holo.Light">
+        <item name="android:popupBackground">@color/colorWhite</item>
+    </style>
+
+    <style name="AndroidSRC.TextAppearance" parent="@android:style/Widget.Holo.Light.TextView">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+    <style name="text_slidingTabTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/selector_slide_title</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/selector_slide_title</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

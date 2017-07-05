@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.hansjin.mukja_android.ResultActivity">
+    <TextView
+        android:id="@+id/txtfood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="음식이름"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/txtcategory"
+        android:layout_below="@+id/txtfood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="카테고리"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/txtSimilar"
+        android:layout_below="@+id/buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="비슷한 요리들"
+        android:layout_marginBottom="10dp"/>
+    <Button
+    android:id="@+id/buy"
+    android:layout_below="@+id/ingredient"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Buy"/>
+    <TextView
+        android:id="@+id/food"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/txtSimilar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="음식이름"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/taste"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/txtSimilar"
+        android:layout_below="@+id/txtfood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="맛 : "
+        android:textSize="20dp"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/country"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/txtSimilar"
+        android:layout_below="@+id/taste"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="국적 : "
+        android:textSize="20dp"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/cooking"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/txtSimilar"
+        android:layout_below="@+id/country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="조리방식 : "
+        android:textSize="20dp"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/ingredient"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/txtSimilar"
+        android:layout_below="@+id/cooking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="식재료 : "
+        android:textSize="20dp"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/Similar"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/txtSimilar"
+        android:layout_below="@+id/buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="비슷한 요리들"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/similar_btn"
+        android:layout_alignLeft="@id/country"
+        android:layout_below="@+id/ingredient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Similar"/>
+
+    <include layout="@layout/view_loading_indicator" android:id="@+id/indicator" />
+</RelativeLayout>

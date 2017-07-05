@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginTop="18dp"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:layout_marginLeft="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/IV_user"
+                android:scaleType="fitXY"/>
+
+            <include layout="@layout/view_loading_indicator" android:id="@+id/indicator"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                android:id="@+id/TV_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="left|center_vertical"
+                android:gravity="left|center_vertical"
+                android:textSize="15sp"
+                android:textColor="@color/colorBlack"/>
+                <TextView
+                    android:id="@+id/TV_category"
+                    android:layout_below="@+id/TV_user_name"
+                    android:layout_width="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorGrayText"
+                    android:layout_marginLeft="10dp"
+                    android:maxLines="2"/>
+                <TextView
+                    android:id="@+id/TV_about_me"
+                    android:layout_below="@+id/TV_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:maxLines="2"/>
+            </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/IV_kakaotalk"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"/>
+        <ImageView
+            android:id="@+id/IV_facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+
+    <!--<include layout="@layout/cell_posting_header" android:id="@+id/cell_posting_header" />-->
+
+    <!---->
+
+    <!--<include layout="@layout/cell_posting_body_desc" android:id="@+id/cell_posting_body_desc" />-->
+
+    <!--<include layout="@layout/cell_posting_tail" android:id="@+id/cell_posting_tail" />-->
+
+</LinearLayout>

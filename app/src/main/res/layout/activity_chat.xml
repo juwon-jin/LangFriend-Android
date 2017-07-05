@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/TV_letter_you"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="쪽지가 도착했습니다!"
+        android:textSize="30sp"
+        android:layout_gravity="center"/>
+    <TextView
+        android:id="@+id/TV_letter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="쪽지 내용"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@drawable/border_posting"
+        android:layout_gravity="center"/>
+
+    <EditText
+        android:id="@+id/ET_letter"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border_posting"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        android:hint="여기에 쪽지를 남겨보세요!"/>
+    <Button
+        android:id="@+id/BT_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="전송"
+        android:layout_gravity="center"/>
+</LinearLayout>

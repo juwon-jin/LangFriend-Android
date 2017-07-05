@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "34013865218",
+    "firebase_url": "https://langfriend-5b011.firebaseio.com",
+    "project_id": "langfriend-5b011",
+    "storage_bucket": "langfriend-5b011.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:34013865218:android:6a4fc8ab5b15ccfa",
+        "android_client_info": {
+          "package_name": "makejin.langfriend"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "34013865218-asqro21dp1l807of765a9jqm138lqfnf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfoyvxC9FUyyU96ECg36TzTDeJzPKyd6Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
